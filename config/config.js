@@ -73,7 +73,7 @@ var config = {
 
     url: [
         "./images/index_background.jpg",
-        "./images/friedenberg-logo.png",
+        "./images/David_Friedenberg.jpg",
         "./images/work-bk.png",
         "./images/4.jpg"
     ]
