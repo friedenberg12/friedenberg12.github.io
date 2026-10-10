@@ -43,6 +43,13 @@ html {
     z-index: 3;
 }
 
+.navbar-logo {
+    display: block;
+    width: auto;
+    height: 48px;
+    object-fit: contain;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.9);
 }
