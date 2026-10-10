@@ -72,7 +72,8 @@ var config = {
     ],
 
     url: [
-        "./images/index_background.jpg",
+        // "./images/index_background.jpg",
+        "./images/Cassiopeia-A.webp",
         "./images/David_Friedenberg.jpg",
         "./images/work-bk.png",
         "./images/4.jpg"
