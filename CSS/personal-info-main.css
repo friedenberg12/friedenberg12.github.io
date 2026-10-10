@@ -45,8 +45,8 @@ html {
 
 .navbar-logo {
     display: block;
-    width: auto;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
 }
 

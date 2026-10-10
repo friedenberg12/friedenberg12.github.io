@@ -6,7 +6,7 @@ var config = {
     email: "dfriede1@tamu.edu",
     address: '<a href="https://friedenberg12.github.io/" target="_blank">friedenberg12.github.io</a>',
     qq: '',
-    log: "dfriede1",
+    log: "",
     excpect_work: "Nuclear Theory / Nuclear Astrophysics / Many-Body Physics",
 
     motto: [
