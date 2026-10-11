@@ -82,6 +82,131 @@ $(function () {
             }
         }
 
+        if (Array.isArray(config.publications)) {
+            let publicationsContainer = $(".publications-list");
+            publicationsContainer.empty();
+
+            for (let i = 0; i < config.publications.length; i++) {
+                let publication = config.publications[i];
+
+                if (!publication || !publication.status || !publication.year || !publication.title ||
+                    !publication.authors || !publication.venue || !publication.summary ||
+                    !Array.isArray(publication.tags) || !publication.figure || !publication.caption) {
+                    continue;
+                }
+
+                let statusClass = publication.status.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+                let publicationCard = $("<article>", {
+                    class: "publication-card publication-card-" + statusClass,
+                    "data-aos": "fade-up",
+                    "data-aos-offset": "70"
+                });
+                let publicationFigure = $("<figure>", { class: "publication-figure" });
+                let publicationContent = $("<div>", { class: "publication-content" });
+                let publicationMeta = $("<div>", { class: "publication-meta" });
+                let publicationSummary = $("<div>", { class: "publication-summary" });
+                let publicationTags = $("<ul>", {
+                    class: "publication-tags",
+                    "aria-label": "Topics"
+                });
+                let publicationActions = $("<div>", {
+                    class: "publication-actions",
+                    "aria-label": "Links for " + publication.title
+                });
+
+                publicationFigure.append(
+                    $("<img>", {
+                        class: "publication-image",
+                        src: publication.figure,
+                        alt: "Figure for " + publication.title,
+                        loading: "lazy"
+                    }),
+                    $("<figcaption>").text(publication.caption)
+                );
+
+                publicationMeta.append(
+                    $("<span>", {
+                        class: "publication-status publication-status-" + statusClass
+                    }).text(publication.status),
+                    $("<time>", {
+                        class: "publication-year",
+                        datetime: String(publication.year)
+                    }).text(publication.year)
+                );
+
+                publicationSummary.append(
+                    $("<p>", { class: "publication-summary-text" }).text(publication.summary)
+                );
+
+                for (let j = 0; j < publication.tags.length; j++) {
+                    publicationTags.append($("<li>").text(publication.tags[j]));
+                }
+
+                publicationContent.append(
+                    publicationMeta,
+                    $("<h3>").text(publication.title),
+                    $("<p>", { class: "publication-authors" }).text(publication.authors),
+                    $("<p>", { class: "publication-venue" }).text(publication.venue),
+                    publicationSummary
+                );
+
+                if (publication.tags.length > 0) {
+                    publicationContent.append(publicationTags);
+                }
+
+                if (publication.paper_url) {
+                    publicationActions.append(
+                        $("<a>", {
+                            class: "publication-link",
+                            href: publication.paper_url,
+                            target: "_blank",
+                            rel: "noopener noreferrer"
+                        }).append(
+                            $("<i>", { class: "bi bi-file-earmark-text", "aria-hidden": "true" }),
+                            document.createTextNode(" Paper")
+                        )
+                    );
+                }
+
+                if (publication.arxiv_url) {
+                    publicationActions.append(
+                        $("<a>", {
+                            class: "publication-link",
+                            href: publication.arxiv_url,
+                            target: "_blank",
+                            rel: "noopener noreferrer"
+                        }).append(
+                            $("<i>", { class: "bi bi-journal-text", "aria-hidden": "true" }),
+                            document.createTextNode(" arXiv")
+                        )
+                    );
+                }
+
+                if (publication.doi) {
+                    publicationActions.append(
+                        $("<a>", {
+                            class: "publication-link publication-doi",
+                            href: "https://doi.org/" + publication.doi,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            title: publication.doi,
+                            "aria-label": "Open DOI " + publication.doi
+                        }).append(
+                            $("<i>", { class: "bi bi-link-45deg", "aria-hidden": "true" }),
+                            document.createTextNode(" DOI")
+                        )
+                    );
+                }
+
+                if (publicationActions.children().length > 0) {
+                    publicationContent.append(publicationActions);
+                }
+
+                publicationCard.append(publicationFigure, publicationContent);
+                publicationsContainer.append(publicationCard);
+            }
+        }
+
         $(".profile-page .page-header").css("background-image", "url(" + config.url[0] + ")");
         $(".myphoto").attr("src", config.url[1]);
         $(".portfolio-section").css({

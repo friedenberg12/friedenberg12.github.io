@@ -69,6 +69,47 @@ var config = {
         }
     ],
 
+    publications: [
+        {
+            status: "Published",
+            year: 2025,
+            title: "Building neutron stars with the MUSES calculation engine",
+            authors: "M. R. Pelicer, N. Cruz-Camacho, C. Conde-Ocazionez, D. Friedenberg, et al.",
+            venue: "Physical Review D 111, 103037",
+            summary: "Add a short summary of your contribution to this publication.",
+            tags: ["Neutron Stars", "Equation of State", "MUSES", "Chiral EFT"],
+            figure: "./images/effective-mass.png",
+            caption: "Placeholder figure — replace with a figure from this publication.",
+            paper_url: "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.111.103037",
+            arxiv_url: "https://arxiv.org/abs/2502.07902",
+            doi: "10.1103/PhysRevD.111.103037"
+        },
+        {
+            status: "Under Review",
+            year: 2026,
+            title: "Studying the QCD Matter produced in Heavy-Ion Collisions using the MUSES Calculation Engine",
+            authors: "J. Jahan, K. P. Pala, Y. Yang, ..., D. Friedenberg, et al.",
+            venue: "arXiv:2606.26326",
+            summary: "Add a short summary of your contribution to this publication.",
+            tags: ["Heavy-Ion Collisions", "QCD Matter", "MUSES", "Scientific Computing"],
+            figure: "./images/effective-mass.png",
+            caption: "Placeholder figure — replace with a figure from this preprint.",
+            arxiv_url: "https://arxiv.org/abs/2606.26326",
+            doi: "10.48550/arXiv.2606.26326"
+        },
+        {
+            status: "In Progress",
+            year: 2026,
+            title: "Nucleon self-energies in hot, dense nuclear matter from chiral effective field theory",
+            authors: "D. Friedenberg and J. W. Holt",
+            venue: "Manuscript in preparation",
+            summary: "Add a short summary of your contribution to this project.",
+            tags: ["Nucleon Self-Energies", "Finite Temperature", "Chiral EFT", "Many-Body Theory"],
+            figure: "./images/effective-mass.png",
+            caption: "Placeholder figure — replace with a figure from this project."
+        }
+    ],
+
     portfolio: [
         ["./images/card-oss-contrib.png", "https://github.com/happysnaker/qq-ai-bot", "qq-ai-bot", "Self-hosted QQ ↔ AI bot scaffold with OneBot 11 / NapCat / LLOneBot, ACP-compatible agents, persistent sessions, progress streaming, and a Docker demo."],
         ["./images/card-go-service-starter.png", "https://github.com/happysnaker/go-service-starter", "go-service-starter", "Production-minded Go HTTP service starter with health endpoints, structured logging, graceful shutdown, and Docker."],
