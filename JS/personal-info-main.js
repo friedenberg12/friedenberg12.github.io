@@ -34,29 +34,6 @@ $(function () {
             "position": "relative !important"
         });
         $(".others-section").css("background", "url(" + config.url[3] + ")");
-        $(".desc").html(config.skills_description);
-        //------E-------
-
-
-        if (config.skills) {
-            for (let i = 0; i < config.skills.length; i++) {
-                let skill_name = config.skills[i][0];
-                let num = config.skills[i][1];
-                let color = config.skills[i][2];
-                let s = "<div class=\"progress_bar\">\n" +
-                    "    <div class=\"pro-bar\">\n" +
-                    "        <small class=\"progress_bar_title\">\n" +
-                    skill_name +
-                    "            <span class=\"progress_number\">%</span>\n" +
-                    "        </small>\n" +
-                    "        <span class=\"progress-bar-inner p-a\"\n" +
-                    "              style=\"background-color:" + color + "; width:" + num + "%;\" data-value=\"" + num + "\"\n" +
-                    "              data-percentage-value=\"" + num + "\"></span>\n" +
-                    "    </div>\n" +
-                    "</div>";
-                $(".skill-body").append(s)
-            }
-        }
 
 
         let row_i = 0;

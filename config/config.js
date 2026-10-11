@@ -21,23 +21,6 @@ var config = {
 
     about: "I received my BA in Physics and Mathematics from Yeshiva University in 2020 and his MA in Physics in 2021. David started his PhD research at Texas A&M University in 2022 and has been working with the NSF-funded MUSES collaboration to adapt nuclear matter equation of state models based on chiral effective field theory into a new cyberinfrastructure which will provide the scientific community novel tools to answer critical interdisciplinary questions in nuclear astrophysics. David is also working on developing finite-temperature microscopic optical model potentials beyond the mean-field approximation based on chiral two-body and three-body potentials.",
 
-    skills: [
-        ["Go", 90, "#00ADD8"],
-        ["Java", 88, "#f89820"],
-        ["Distributed Systems", 85, "#7c3aed"],
-        ["SQL / Storage", 88, "#14b8a6"],
-        ["Observability", 80, "#22c55e"],
-        ["Networking / OS", 78, "#f59e0b"]
-    ],
-
-    skills_description: "<ul>" +
-        "<li>Go / Java 后端服务设计与基础工程搭建。</li>" +
-        "<li>关注 RPC、超时/重试、幂等、缓存、队列与服务治理。</li>" +
-        "<li>重视日志、指标、追踪与线上可观测性。</li>" +
-        "<li>具备数据库索引、事务、SQL 调优与存储基础。</li>" +
-        "<li>喜欢把工程经验整理成模板、清单与可复用资产。</li>" +
-        "</ul>",
-
     portfolio: [
         ["./images/card-oss-contrib.png", "https://github.com/happysnaker/qq-ai-bot", "qq-ai-bot", "Self-hosted QQ ↔ AI bot scaffold with OneBot 11 / NapCat / LLOneBot, ACP-compatible agents, persistent sessions, progress streaming, and a Docker demo."],
         ["./images/card-go-service-starter.png", "https://github.com/happysnaker/go-service-starter", "go-service-starter", "Production-minded Go HTTP service starter with health endpoints, structured logging, graceful shutdown, and Docker."],
