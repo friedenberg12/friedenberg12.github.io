@@ -8,6 +8,32 @@ addScript();
 $(function () {
     if (config) {
         $(".me").html(config.about);
+
+        if (Array.isArray(config.about_skill_groups)) {
+            let skillsContainer = $(".about-skill-groups");
+            skillsContainer.empty();
+
+            for (let i = 0; i < config.about_skill_groups.length; i++) {
+                let group = config.about_skill_groups[i];
+
+                if (!group || !group.title || !Array.isArray(group.skills)) {
+                    continue;
+                }
+
+                let groupElement = $("<div>", { class: "about-skill-group" });
+                let skillList = $("<ul>", { class: "about-skill-list" });
+
+                groupElement.append($("<h4>").text(group.title));
+
+                for (let j = 0; j < group.skills.length; j++) {
+                    skillList.append($("<li>").text(group.skills[j]));
+                }
+
+                groupElement.append(skillList);
+                skillsContainer.append(groupElement);
+            }
+        }
+
         $(".profile-page .page-header").css("background-image", "url(" + config.url[0] + ")");
         $(".myphoto").attr("src", config.url[1]);
         $(".portfolio-section").css({

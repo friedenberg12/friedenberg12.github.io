@@ -5,6 +5,42 @@ var config = {
             critical interdisciplinary questions in nuclear astrophysics. David is also working on developing finite-temperature microscopic optical model
             potentials beyond the mean-field approximation based on chiral two-body and three-body potentials.`,
 
+    about_skill_groups: [
+        {
+            title: "Programming Languages & Tools",
+            skills: [
+                "C++",
+                "Python",
+                "Fortran",
+                "Linux",
+                "Git",
+                "High-Performance Computing",
+                "Docker",
+                "Kubernetes"
+            ]
+        },
+        {
+            title: "Computational Methods",
+            skills: [
+                "Machine Learning",
+                "Normalizing Flows",
+                "Time Series Analysis",
+                "Renormalization Group (RG)",
+                "Markov Chain Monte Carlo"
+            ]
+        },
+        {
+            title: "Physics Areas",
+            skills: [
+                "Nuclear Many-Body Theory",
+                "Chiral Effective Field Theory",
+                "Nuclear Thermodynamics",
+                "Neutron Stars",
+                "Core-collapse Supernovae"
+            ]
+        }
+    ],
+
     portfolio: [
         ["./images/card-oss-contrib.png", "https://github.com/happysnaker/qq-ai-bot", "qq-ai-bot", "Self-hosted QQ ↔ AI bot scaffold with OneBot 11 / NapCat / LLOneBot, ACP-compatible agents, persistent sessions, progress streaming, and a Docker demo."],
         ["./images/card-go-service-starter.png", "https://github.com/happysnaker/go-service-starter", "go-service-starter", "Production-minded Go HTTP service starter with health endpoints, structured logging, graceful shutdown, and Docker."],
