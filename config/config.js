@@ -1,17 +1,4 @@
 var config = {
-    log: "",
-    excpect_work: "Nuclear Theory / Nuclear Astrophysics / Many-Body Physics",
-
-    motto: [
-        "Build useful things, then explain them clearly.",
-        "Reliability is a feature.",
-        "Keep systems simple, observable, and operable.",
-        "Write less magic, ship more signal.",
-        "Good documentation compounds engineering impact."
-    ],
-
-    welcome: "Nuclear Theory / Nuclear Astrophysics<br>Many-Body Physics · High-Performance Computing · Machine Learning<br>Welcome to my page!",
-
     about: `I received my BA in Physics and Mathematics from Yeshiva University in 2020 and his MA in Physics in 2021. David started his PhD research
             at Texas A&M University in 2022 and has been working with the NSF-funded MUSES collaboration to adapt nuclear matter equation of state models
             based on chiral effective field theory into a new cyberinfrastructure which will provide the scientific community novel tools to answer
@@ -43,12 +30,6 @@ var config = {
         ["2026-06", "Published backend-engineer-checklist", "Built a shareable backend growth checklist covering languages, databases, distributed systems, networking, and observability."],
         ["2026-06", "Ongoing OSS contributions", "Opened pull requests for GitHub Docs, Docker Docs, OpenTelemetry Go, Prometheus, chi, and Vue docs."],
         ["2026-06", "Technical writing", "Maintain a personal technical site with notes on backend engineering, Java/Go, and systems topics."]
-    ],
-
-    icon: [
-        ["./svg/github.svg", "https://github.com/happysnaker", "GitHub profile"],
-        ["./svg/博客.svg", "https://happysnaker.github.io/", "Technical blog"],
-        ["./svg/github.svg", "https://happysnaker.github.io/support/#from-resume", "Support via WeChat / Alipay"]
     ],
 
     url: [

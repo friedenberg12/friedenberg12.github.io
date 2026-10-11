@@ -7,10 +7,7 @@ addScript();
 //星光依旧灿烂，激情仍然燃烧。因为有梦想，所以我存在。你在你的领域里不惜青春，我在我的道路上不知疲倦。
 $(function () {
     if (config) {
-        $(".log").html(config.log);
-        $(".self-intro").html(config.welcome);
         $(".me").html(config.about);
-        $(".for-work").html(config.excpect_work);
         $(".profile-page .page-header").css("background-image", "url(" + config.url[0] + ")");
         $(".myphoto").attr("src", config.url[1]);
         $(".portfolio-section").css({
@@ -114,20 +111,6 @@ $(function () {
                 )
             }
         }
-
-        if (config.icon) {
-            for (let i = 0; i < config.icon.length; i++) {
-                let img = config.icon[i][0];
-                let url = config.icon[i][1];
-                let desc = config.icon[i][2];
-                $(".icon-insert").append(
-                    "<a class=\"my-tooltip\" href=\"" + url + "\" title=\"访问我的社交平台\">\n" +
-                    "    <img src=\"" + img + "\" alt=\"\">\n" +
-                    "    <span class=\"my-tooltiptext\">" + desc + "</span>\n" +
-                    "</a>"
-                );
-            }
-        }
     }
 
     progress();
@@ -158,56 +141,6 @@ $(function () {
             $(this).prev().find("span").html(data + "%");
         });
     }
-
-
-    // ---- 座右铭字缓出效果 -----
-    var text = "Build useful things, then explain them clearly.";
-    var length = text.length;
-    let index = 0;
-    var mottoArrs = config.motto;
-    // $.ajaxSettings.async = false;
-    // $.getJSON("./motto.json", function (data) {
-    //     mottoArrs = data;
-    // })
-    var e1 = setInterval(insWords, 150);
-    var e2 = 0;
-
-    function insWords() {
-        if (index <= length + 1 && index >= 0) {
-            $(".page-header .motto").append(text[index]);
-        }
-        index++;
-        if (index > length) {
-            index += 50;
-            e2 = setInterval(delWords, 50);
-            clearInterval(e1);
-        }
-    }
-
-    function delWords() {
-        if (index <= length && index >= 0) {
-            let shower = text.substr(0, index);
-            $(".page-header .motto").html(shower);
-        }
-        index--;
-        if (index < 0) {
-            index = -5;
-            let i = Math.floor(mottoArrs.length * Math.random());
-            text = mottoArrs[i];
-            length = text.length;
-            e1 = setInterval(insWords, 150);
-            clearInterval(e2);
-        }
-
-    }
-
-    // ----- END ------
-
-
-
-    //--- 绑定按钮特效和文字淡入淡出 ---
-    $(".self-intro").fadeIn(3000);
-    $(".hvr-bounce-to-right").fadeIn(3000);
 
     //----END---
 
