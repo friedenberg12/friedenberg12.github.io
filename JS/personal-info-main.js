@@ -160,25 +160,16 @@ $(function () {
         }
     }
 
-
-
-    var h;
-
-    $(window).resize(function () {
-        h = $(".page-header").height() - $(".page-header .bg-primary").height();
-    })
-
     progress();
-    if ($(window).scrollTop() >= $(".page-header").height() - $(".page-header .bg-primary").height()) {
-        $(".page-header .bg-primary").css("cssText", "background-color:rgb(55 65 178)!important");
+
+    function updateNavbarBackground() {
+        $(".page-header .bg-primary").toggleClass("navbar-scrolled", $(window).scrollTop() > 0);
     }
+
+    updateNavbarBackground();
+
     $(window).scroll(function () {
-        h = $(".page-header").height() - $(".page-header .bg-primary").height();
-        if ($(window).scrollTop() >= h) {
-            $(".page-header .bg-primary").css("cssText", "background-color:rgb(55 65 178)!important");
-        } else {
-            $(".page-header .bg-primary").css("cssText", "background-color:rgba(0,0,0,0.20)!important");
-        }
+        updateNavbarBackground();
 
 
         if ($(".skill-section .card").hasClass("aos-animate")) {

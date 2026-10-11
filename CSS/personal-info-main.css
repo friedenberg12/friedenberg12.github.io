@@ -39,6 +39,10 @@ html {
     transition: 0.4s;
 }
 
+.page-header .bg-primary.navbar-scrolled {
+    background-color: rgba(23, 45, 74, 0.95) !important;
+}
+
 .navbar-toggler {
     z-index: 3;
 }
