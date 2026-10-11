@@ -50,6 +50,21 @@ html {
     object-fit: contain;
 }
 
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand-name {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 2.0rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.9);
 }
@@ -127,15 +142,6 @@ html {
 .page-header .left-content {
     max-width: 680px;
     text-align: left;
-}
-
-.hero-name {
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 2.0rem;
-    font-weight: 600;
-    /* letter-spacing: 0.08em; */
-    /* text-transform: uppercase; */
 }
 
 .hero-kicker {
