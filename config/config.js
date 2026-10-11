@@ -41,6 +41,34 @@ var config = {
         }
     ],
 
+    research_intro: `
+        <p>
+            My research sits at the intersection of nuclear many-body theory, nuclear astrophysics, and
+            scientific computing. I use microscopic nuclear interactions grounded in chiral effective
+            field theory to study nuclear matter across the temperatures and densities found in laboratory
+            experiments and extreme astrophysical environments.
+        </p>
+        <p>
+            A central goal of my work is to connect fundamental nuclear theory with calculations that can
+            be used in larger simulations and compared with observable phenomena. This requires a combination
+            of many-body methods, high-performance computing, and modern computational techniques.
+        </p>`,
+
+    research_topics: [
+        {
+            title: "Nuclear matter and equations of state",
+            description: "As part of the NSF-funded MUSES collaboration, I work to adapt nuclear-matter equations of state based on chiral effective field theory for a shared cyberinfrastructure. This makes microscopic predictions more accessible for applications involving neutron stars, core-collapse supernovae, and other dense-matter systems.",
+            figure: "./images/effective-mass.png",
+            caption: "A representative equation-of-state or dense-matter figure."
+        },
+        {
+            title: "Finite-temperature optical potentials",
+            description: "I also develop microscopic optical-model potentials at finite temperature beyond the mean-field approximation. Starting from chiral two- and three-body interactions, this work connects the underlying nuclear force with the propagation of nucleons through hot nuclear matter.",
+            figure: "./images/effective-mass.png",
+            caption: "A representative optical-potential or self-energy figure."
+        }
+    ],
+
     portfolio: [
         ["./images/card-oss-contrib.png", "https://github.com/happysnaker/qq-ai-bot", "qq-ai-bot", "Self-hosted QQ ↔ AI bot scaffold with OneBot 11 / NapCat / LLOneBot, ACP-compatible agents, persistent sessions, progress streaming, and a Docker demo."],
         ["./images/card-go-service-starter.png", "https://github.com/happysnaker/go-service-starter", "go-service-starter", "Production-minded Go HTTP service starter with health endpoints, structured logging, graceful shutdown, and Docker."],

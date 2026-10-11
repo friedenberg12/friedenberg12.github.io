@@ -585,6 +585,14 @@ html {
     margin: 0;
 }
 
+.research-figure-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(23, 45, 74, 0.1);
+    border-radius: 12px;
+}
+
 .research-figure-placeholder {
     display: flex;
     flex-direction: column;

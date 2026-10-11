@@ -8,6 +8,7 @@ addScript();
 $(function () {
     if (config) {
         $(".me").html(config.about);
+        $(".research-intro").html(config.research_intro);
 
         if (Array.isArray(config.about_skill_groups)) {
             let skillsContainer = $(".about-skill-groups");
@@ -31,6 +32,53 @@ $(function () {
 
                 groupElement.append(skillList);
                 skillsContainer.append(groupElement);
+            }
+        }
+
+        if (Array.isArray(config.research_topics)) {
+            let researchContainer = $(".research-topics");
+            researchContainer.empty();
+
+            for (let i = 0; i < config.research_topics.length; i++) {
+                let topic = config.research_topics[i];
+
+                if (!topic || !topic.title || !topic.description || !topic.figure || !topic.caption) {
+                    continue;
+                }
+
+                let areaNumber = String(i + 1).padStart(2, "0");
+                let topicClasses = "research-topic";
+
+                if (i % 2 === 1) {
+                    topicClasses += " research-topic-reverse";
+                }
+
+                let topicElement = $("<article>", {
+                    class: topicClasses,
+                    "data-aos": "fade-up",
+                    "data-aos-offset": "80"
+                });
+                let topicCopy = $("<div>", { class: "research-topic-copy" });
+                let figure = $("<figure>", { class: "research-figure" });
+
+                topicCopy.append(
+                    $("<p>", { class: "research-topic-number" }).text("Research Area " + areaNumber),
+                    $("<h3>").text(topic.title),
+                    $("<p>").text(topic.description)
+                );
+
+                figure.append(
+                    $("<img>", {
+                        class: "research-figure-image",
+                        src: topic.figure,
+                        alt: topic.title + " research figure",
+                        loading: "lazy"
+                    }),
+                    $("<figcaption>").text(topic.caption)
+                );
+
+                topicElement.append(topicCopy, figure);
+                researchContainer.append(topicElement);
             }
         }
 
