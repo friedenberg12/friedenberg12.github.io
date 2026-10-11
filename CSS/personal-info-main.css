@@ -19,7 +19,7 @@ html {
 
 .page-header .go {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     bottom: 0px;
     left: 50%;
     width: 32px;
