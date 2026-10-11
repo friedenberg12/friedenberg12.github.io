@@ -430,6 +430,62 @@ html {
     line-height: 1.8;
 }
 
+.about-skill-groups {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    padding: 28px 26px 32px;
+    background: rgba(6, 14, 27, 0.28);
+    border-top: 1px solid rgba(158, 216, 255, 0.14);
+}
+
+.about-skill-group {
+    padding: 0 22px;
+    border-left: 1px solid rgba(158, 216, 255, 0.14);
+}
+
+.about-skill-group:first-child {
+    border-left: 0;
+}
+
+.about-skill-group h4 {
+    margin: 0 0 12px;
+    color: #9ed8ff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.about-skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about-skill-list li {
+    padding: 8px 12px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.2;
+    background: rgba(158, 216, 255, 0.08);
+    border: 1px solid rgba(158, 216, 255, 0.22);
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.about-skill-list li:hover {
+    background: rgba(158, 216, 255, 0.14);
+    border-color: rgba(158, 216, 255, 0.38);
+}
+
 @media (max-width: 767.98px) {
     .about-card-layout {
         grid-template-columns: 1fr;
@@ -442,6 +498,19 @@ html {
 
     .about-copy {
         padding: 30px 26px 34px;
+    }
+
+    .about-skill-groups {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 24px 26px 30px;
+    }
+
+    .about-skill-group,
+    .about-skill-group:first-child {
+        padding: 18px 0 0;
+        border-top: 1px solid rgba(158, 216, 255, 0.14);
+        border-left: 0;
     }
 }
 
