@@ -7,13 +7,6 @@ addScript();
 //星光依旧灿烂，激情仍然燃烧。因为有梦想，所以我存在。你在你的领域里不惜青春，我在我的道路上不知疲倦。
 $(function () {
     if (config) {
-        $(".name").html(config.name);
-        $(".sex").html(config.sex);
-        $(".age").html(config.age);
-        $(".phone").html(config.phone);
-        $(".email").html(config.email);
-        $(".address").html(config.address);
-        $(".qq").html(config.qq);
         $(".log").html(config.log);
         $(".self-intro").html(config.welcome);
         $(".me").html(config.about);
@@ -165,23 +158,6 @@ $(function () {
             $(this).prev().find("span").html(data + "%");
         });
     }
-
-    $(".send-btn").on("click", mailsend);
-
-    function mailsend() {
-        var subject = $(".subject").val();
-        var content = $(".message").val();
-        content = content.replace(new RegExp(' ', 'g'), '%20');
-
-        content = content.replace(new RegExp('\n', 'g'), '%0d%0a');
-
-        // if (confirm("你确定要向" + who + "放送邮件吗?") == true) {
-        //     location="mailto:sample@fly63.com?subject=test&cc=sample@hotmail.com&subject=主题&body=内容";
-        // }
-        location = "mailto:" + config.email + "?subject=" + subject + "&body=" + content;
-    }
-
-
 
 
     // ---- 座右铭字缓出效果 -----
