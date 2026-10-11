@@ -141,6 +141,7 @@ var config = {
         "./images/Cassiopeia-A.webp",
         "./images/David_Friedenberg.jpg",
         "./images/work-bk.png",
+        "./images/5.jpg",
         "./images/4.jpg"
     ]
 }

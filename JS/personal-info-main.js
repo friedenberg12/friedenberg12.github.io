@@ -209,8 +209,11 @@ $(function () {
 
         $(".profile-page .page-header").css("background-image", "url(" + config.url[0] + ")");
         $(".myphoto").attr("src", config.url[1]);
+        $(".publications-section").css({
+            "background": "url(" + config.url[2] + ") repeat-y center top",
+        });
         $(".portfolio-section").css({
-            "background": "url(" + config.url[2] + ") no-repeat center top",
+            "background": "url(" + config.url[3] + ") no-repeat center top",
             "margin-top": "30px",
             "padding-top": "50px",
             "text-align": "center !important",
@@ -222,7 +225,7 @@ $(function () {
             "background-size": "cover",
             "position": "relative !important"
         });
-        $(".others-section").css("background", "url(" + config.url[3] + ")");
+        $(".others-section").css("background", "url(" + config.url[4] + ")");
 
 
         let row_i = 0;
