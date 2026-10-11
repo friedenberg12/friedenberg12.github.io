@@ -10,12 +10,12 @@ $(function () {
         $(".me").html(config.about);
         $(".research-intro").html(config.research_intro);
 
-        if (Array.isArray(config.about_skill_groups)) {
+        if (Array.isArray(config.about_skills)) {
             let skillsContainer = $(".about-skill-groups");
             skillsContainer.empty();
 
-            for (let i = 0; i < config.about_skill_groups.length; i++) {
-                let group = config.about_skill_groups[i];
+            for (let i = 0; i < config.about_skills.length; i++) {
+                let group = config.about_skills[i];
 
                 if (!group || !group.title || !Array.isArray(group.skills)) {
                     continue;

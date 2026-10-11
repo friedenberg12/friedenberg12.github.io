@@ -5,7 +5,7 @@ var config = {
             critical interdisciplinary questions in nuclear astrophysics. David is also working on developing finite-temperature microscopic optical model
             potentials beyond the mean-field approximation based on chiral two-body and three-body potentials.`,
 
-    about_skill_groups: [
+    about_skills: [
         {
             title: "Programming Languages & Tools",
             skills: [
