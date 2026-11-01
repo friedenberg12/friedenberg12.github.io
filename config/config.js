@@ -2,7 +2,7 @@ var config = {
     about: `<p>I'm David Friedenberg, a PhD candidate at the <a href="https://cyclotron.tamu.edu/" target="_blank">Cyclotron Institute</a>
             at Texas A&M University. I work with <b>Dr. Jeremy Holt</b> in the the <a href="https://densematter.org/" target="_blank">dense matter theory group</a>,
             at the intersection of <b>theoretical nuclear physics</b> and <b>computational astrophysics</b>.</p>
-            <p>I combine <b>nuclear many-body theory</b>, <b>high-performance computing</b>, and <b>machine learning techniques</b> to develop microscopic
+            <p>My work combines <b>nuclear many-body theory</b>, <b>high-performance computing</b>, and <b>machine learning techniques</b> to develop microscopic
             models of hot, dense nuclear matter from first principles. These models enable a deeper understanding of extreme
             astrophysical phenomena like <b>core-collapse supernovae</b> and <b>binary neutron star mergers</b>.</p>
             <p>I'm also a member of the NSF-funded <a href="https://musesframework.io/" target="_blank">MUSES collaboration</a>,
@@ -46,26 +46,36 @@ var config = {
 
     research_intro: `
         <p>
-            My research sits at the intersection of nuclear many-body theory, nuclear astrophysics, and
-            scientific computing. I use microscopic nuclear interactions grounded in chiral effective
-            field theory to study nuclear matter across the temperatures and densities found in laboratory
-            experiments and extreme astrophysical environments.
+            My research focus involves developing microscopic models with chiral effective field theory, the low-energy
+            description of the strong nuclear force, to describe finite-temperature nuclear matter.
         </p>
         <p>
             A central goal of my work is to connect fundamental nuclear theory with calculations that can
             be used in larger simulations and compared with observable phenomena. This requires a combination
-            of many-body methods, high-performance computing, and modern computational techniques.
+            of <b>many-body theory</b>, <b>high-performance computing</b>, and modern <b>machine learning</b> techniques.
         </p>`,
 
     research_topics: [
         {
-            title: "Nuclear matter and equations of state",
+            title: "Nucleon self energy in finite-temperature nuclear matter",
             description: "As part of the NSF-funded MUSES collaboration, I work to adapt nuclear-matter equations of state based on chiral effective field theory for a shared cyberinfrastructure. This makes microscopic predictions more accessible for applications involving neutron stars, core-collapse supernovae, and other dense-matter systems.",
             figure: "./images/effective-mass.png",
             caption: "A representative equation-of-state or dense-matter figure."
         },
         {
-            title: "Finite-temperature optical potentials",
+            title: "MUSES Collaboration: Chiral EFT Equation of State",
+            description: "As part of the NSF-funded MUSES collaboration, I work to adapt nuclear-matter equations of state based on chiral effective field theory for a shared cyberinfrastructure. This makes microscopic predictions more accessible for applications involving neutron stars, core-collapse supernovae, and other dense-matter systems.",
+            figure: "./images/effective-mass.png",
+            caption: "A representative equation-of-state or dense-matter figure."
+        },
+        {
+            title: "Nuclear microphysics in core-collapse supernovae",
+            description: "I also develop microscopic optical-model potentials at finite temperature beyond the mean-field approximation. Starting from chiral two- and three-body interactions, this work connects the underlying nuclear force with the propagation of nucleons through hot nuclear matter.",
+            figure: "./images/effective-mass.png",
+            caption: "A representative optical-potential or self-energy figure."
+        },
+        {
+            title: "Critical scaling in the nuclear liquid-gas phase transition",
             description: "I also develop microscopic optical-model potentials at finite temperature beyond the mean-field approximation. Starting from chiral two- and three-body interactions, this work connects the underlying nuclear force with the propagation of nucleons through hot nuclear matter.",
             figure: "./images/effective-mass.png",
             caption: "A representative optical-potential or self-energy figure."
