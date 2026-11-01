@@ -1,10 +1,13 @@
 var config = {
-    about: `I received my BA in Physics and Mathematics from Yeshiva University in 2020 and his MA in Physics in 2021. David started his PhD research
-            at Texas A&M University in 2022 and has been working with the NSF-funded MUSES collaboration to adapt nuclear matter equation of state models
-            based on chiral effective field theory into a new cyberinfrastructure which will provide the scientific community novel tools to answer
-            critical interdisciplinary questions in nuclear astrophysics. David is also working on developing finite-temperature microscopic optical model
-            potentials beyond the mean-field approximation based on chiral two-body and three-body potentials.`,
-
+    about: `<p>I'm David Friedenberg, a PhD candidate at the <a href="https://cyclotron.tamu.edu/" target="_blank">Cyclotron Institute</a>
+            at Texas A&M University. I work with <b>Dr. Jeremy Holt</b> in the the <a href="https://densematter.org/" target="_blank">dense matter theory group</a>,
+            at the intersection of <b>theoretical nuclear physics</b> and <b>computational astrophysics</b>.</p>
+            <p>I combine <b>nuclear many-body theory</b>, <b>high-performance computing</b>, and <b>machine learning techniques</b> to develop microscopic
+            models of hot, dense nuclear matter from first principles. These models enable a deeper understanding of extreme
+            astrophysical phenomena like <b>core-collapse supernovae</b> and <b>binary neutron star mergers</b>.</p>
+            <p>I'm also a member of the NSF-funded <a href="https://musesframework.io/" target="_blank">MUSES collaboration</a>,
+            where I develop computational tools for the nuclear astrophysics community.</p>`,
+    
     about_skills: [
         {
             title: "Programming Languages & Tools",
