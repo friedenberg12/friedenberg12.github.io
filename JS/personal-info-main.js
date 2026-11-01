@@ -210,7 +210,7 @@ $(function () {
         $(".profile-page .page-header").css("background-image", "url(" + config.url[0] + ")");
         $(".myphoto").attr("src", config.url[1]);
         $(".publications-section").css({
-            "background": "url(" + config.url[2] + ") repeat-y center top",
+            "background": "url(" + config.url[2] + ") repeat center top",
         });
         $(".portfolio-section").css({
             "background": "url(" + config.url[3] + ") no-repeat center top",
